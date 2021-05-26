@@ -25,7 +25,7 @@ export class AppComponent {
   dataSearch$: Observable<TreeNode[]>;
   data1: TreeNode[];
 
-  lawData$: Observable<any>;
+  lawData$: Observable<TreeNode[]>;
   lawDataSearch$: Observable<TreeNode[]>;
   lawData1: TreeNode[];
 
@@ -70,47 +70,7 @@ export class AppComponent {
 
     this.lawData$ = this.http.getLawData().pipe(
       tap(console.log),
-      //        map((res:Ilaw[]) => Object.assign({},{label:res[0].LawName),
-      //  flatMap(children => children),
-      //  map(children => Object.assign({}, children, { status: false }))
-
-      // data.map((entity:law)=>{{label:entity.LawName}});
-      map((data: Ilaw[], i) => {
-        return [
-          {
-            label: data[i].LawName,
-            children: [
-              {
-                label: 'Child 1',
-                children: [
-                  {
-                    label: 'Grandchild 1.1',
-                    type: 'leaf'
-                  },
-                  {
-                    label: 'Grandchild 1.2',
-                    type: 'leaf'
-                  }
-                ]
-              },
-              {
-                label: 'Child 2',
-                children: [
-                  {
-                    label: 'Child 2.1',
-                    type: 'leaf'
-                  },
-                  {
-                    label: 'Child 2.2',
-                    type: 'leaf'
-                  }
-                ]
-              }
-            ]
-          }
-        ];
-      }),
-      tap(console.log)
+      map(data => this.flatme(data))
     );
 
     this.data$ = this.http.getData().pipe(tap(data => (this.data1 = data)));
@@ -131,5 +91,37 @@ export class AppComponent {
       summary: 'Node Selected',
       detail: event.node.label
     });
+  }
+
+  flatme(data: Ilaw[]): TreeNode[] {
+    console.error('flatme', data);
+    let result: TreeNode[] = [];
+    data.forEach(single => {
+      let node: TreeNode = {
+        label: single.LawName,
+        data: {
+          LawUri: single.LawUri,
+          componentNum: ''
+        },
+        children: single.Components.map(comp => {
+          return <TreeNode>{
+            label: comp.eId,
+            data: {
+              LawUri: '',
+              componentNum: comp.componentNum
+            },
+            children: comp.refTo.map(ref => {
+              return <TreeNode>{
+                label: ref.refTo_eId
+              };
+            })
+          };
+        })
+      };
+
+      result.push(node);
+    });
+    console.error('result', result);
+    return result;
   }
 }

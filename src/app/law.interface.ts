@@ -17,7 +17,7 @@ export interface Icomponent {
   // id: string;
   eId: string;
   componentNum: number;
-  // refTo: IrefTo[];
+  refTo: IrefTo[];
 }
 // export interface Ilaws {
 //   byId: { [key: string]: Ilaw };
