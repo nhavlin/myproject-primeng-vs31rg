@@ -1,0 +1,62 @@
+[
+  {
+    "LawUri": "111",
+    "LawName": "law_level1_id111",
+    "Components": [
+      {
+        "eId": "point_5",
+        "componentNum": "5",
+        "refTo": [
+          {
+            "refTo_eId": "#point_6"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_4"
+          }
+        ]
+      },
+      {
+        "eId": "point_6",
+        "componentNum": "6",
+        "refTo": [
+          {
+            "refTo_eId": "#point_7"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "LawUri": "222",
+    "LawName": "law_level1_id222",
+    "Components": [
+      {
+        "eId": "point_5",
+        "componentNum": "5",
+        "refTo": [
+          {
+            "refTo_eId": "#point_6"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_4"
+          }
+        ]
+      },
+      {
+        "eId": "point_6",
+        "componentNum": "6",
+        "refTo": [
+          {
+            "refTo_eId": "#point_7"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_8"
+          }
+        ]
+      }
+    ]
+  }
+]
