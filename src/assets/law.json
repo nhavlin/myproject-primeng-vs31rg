@@ -1,14 +1,15 @@
+
 [
   {
-    "LawUri": "111",
-    "LawName": "law_level1_id111",
+    "LawUri": "61",
+    "LawName": "סעיף 61 בחוק העונשין",
     "Components": [
       {
-        "eId": "point_5",
-        "componentNum": "5",
+        "eId": "61(ג) ",
+        "componentNum": "1",
         "refTo": [
           {
-            "refTo_eId": "#point_6"
+            "refTo_eId": "26יג"
           },
           {
             "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_4"
@@ -16,11 +17,11 @@
         ]
       },
       {
-        "eId": "point_6",
-        "componentNum": "6",
+        "eId": "25יג",
+        "componentNum": "2",
         "refTo": [
           {
-            "refTo_eId": "#point_7"
+            "refTo_eId": "61(ד)"
           },
           {
             "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_8"
@@ -30,15 +31,15 @@
     ]
   },
   {
-    "LawUri": "222",
-    "LawName": "law_level1_id222",
+    "LawUri": "6161",
+    "LawName": "6161 חוק",
     "Components": [
       {
-        "eId": "point_5",
-        "componentNum": "5",
+        "eId": "61(ג) ",
+        "componentNum": "1",
         "refTo": [
           {
-            "refTo_eId": "#point_6"
+            "refTo_eId": "26יג"
           },
           {
             "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_4"
@@ -46,11 +47,41 @@
         ]
       },
       {
-        "eId": "point_6",
-        "componentNum": "6",
+        "eId": "25יג",
+        "componentNum": "2",
         "refTo": [
           {
-            "refTo_eId": "#point_7"
+            "refTo_eId": "61(ד)"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "LawUri": "6162",
+    "LawName": " 6162 חוק ",
+    "Components": [
+      {
+        "eId": "61(ג) ",
+        "componentNum": "1",
+        "refTo": [
+          {
+            "refTo_eId": "26יג"
+          },
+          {
+            "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_4"
+          }
+        ]
+      },
+      {
+        "eId": "25יג",
+        "componentNum": "2",
+        "refTo": [
+          {
+            "refTo_eId": "61(ד)"
           },
           {
             "refTo_eId": "/akn/il/act/PrimaryLegislation/1999-05-27/165159#point_8"
@@ -59,4 +90,5 @@
       }
     ]
   }
+  
 ]

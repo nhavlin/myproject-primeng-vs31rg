@@ -1,3 +1,4 @@
+//מבנה הנתונים המששמש להצגת הנתונים במסך
 export interface TreeNode<T = any> {
   label?: string;
   data?: T;
